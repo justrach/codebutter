@@ -1,0 +1,110 @@
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes darkGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hide-on-small {
+    display: none;
+  }
+}
+
+.author-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.author-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+}
+
+.author-affiliations {
+  font-size: 0.75rem; /* text-xs */
+}
+
+.animated-gradient {
+  background: linear-gradient(270deg, #fdfd96, #ffc0cb, #ffff00, #ffc0cb);
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease infinite;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+@keyframes gradientShiftReverse {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient-reverse {
+  background: linear-gradient(270deg, #fdfd96, #ffc0cb, #ffff00, #ffc0cb);
+  background-size: 600% 600%;
+  animation: gradientShiftReverse 20s ease infinite;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.border-gradient {
+  border-image: linear-gradient(270deg, #ffc0cb, #ffff00, #ffc0cb) 1;
+}
+
+.divider {
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease infinite;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background: linear-gradient(270deg, #ffc0cb, #ffff00, #ffc0cb);
+}
+
+@media (prefers-color-scheme: dark) {
+  .animated-gradient {
+    background: linear-gradient(270deg, #000000, #111111, #000000, #333333);
+    background-size: 600% 600%;
+    animation: darkGradientShift 20s ease infinite;
+    position: relative;
+    overflow: hidden;
+    color: white;
+  }
+}
